@@ -3,6 +3,10 @@
 ## Chemical Representation and Interaction Discovery with Stereoelectronics-Infused Molecular Graphs
 Molecular representation is a foundational element in our understanding of the physical world. Its importance ranges from the fundamentals of chemical reactions to the design of new therapies and materials. Previous molecular machine learning models have employed strings, fingerprints, global features, and simple molecular graphs that are inherently information-sparse representations. However, as the complexity of prediction tasks increases, the molecular representation needs to encode higher fidelity information.  This work introduces a novel approach to infusing quantum-chemical-rich information into molecular graphs via stereoelectronic effects. We show that the explicit addition of stereoelectronic interactions significantly improves the performance of molecular machine learning models. Furthermore, stereoelectronics-infused representations can be learned and deployed with a tailored double graph neural network workflow, enabling its application to any downstream molecular machine learning task. Finally, we show that the learned representations allow for facile stereoelectronic evaluation of previously intractable systems, such as entire proteins, opening new avenues of molecular design. 
 
+## Data availability
+
+The data is available at https://drive.google.com/drive/folders/1cDTih3LFKu5vEmoy6EvtoTgif9dE1_HV?usp=share_link
+
 ## Steps to reproduce the results
 
 ### Step 1: data preparation
