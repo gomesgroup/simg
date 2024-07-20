@@ -1,0 +1,6 @@
+batch_size: 1024
+hidden_size:
+  - 30
+  - 30
+lr: 0.015
+wd: 1.0e-010

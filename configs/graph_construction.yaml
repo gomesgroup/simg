@@ -1,0 +1,50 @@
+target_calculation:
+  atom_targets:
+    - Charge
+    - Core
+    - Valence
+    - Total
+  bond_targets:
+    - occupancy
+    - s
+    - p
+    - d
+    - f
+    - pol_diff
+    - pol_coeff_diff
+  lone_pair_targets:
+    - s
+    - p
+    - d
+    - f
+    - occupancy
+  orbital_interaction_targets:
+    - perturbation energy
+    - energy difference
+    - fock matrix element
+
+descriptor_calculation:
+  atom_descriptors: one-hot
+  bond_descriptors:
+    p_threshold: 90
+
+  lone_pair_descriptors:
+    p_threshold: 80
+
+atoms:
+  - H
+  - B
+  - C
+  - N
+  - O
+  - F
+  - Al
+  - Si
+  - P
+  - S
+  - Cl
+  - As
+  - Br
+  - I
+  - Hg
+  - Bi
