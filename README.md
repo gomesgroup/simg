@@ -7,6 +7,19 @@ Molecular representation is a foundational element in our understanding of the p
 
 The data is available at https://drive.google.com/drive/folders/1cDTih3LFKu5vEmoy6EvtoTgif9dE1_HV?usp=share_link
 
+
+## Environment
+
+PyG is very tricky to install, so usually we use the following installation commands:
+
+```bash
+conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch -c nvidia
+conda install pyg -c pyg
+conda install -c conda-forge pytorch-lightning
+```
+
+Please, make sure that your are using 1.x version of PyTorch Lightning.
+
 ## Steps to reproduce the results
 
 ### Step 1: data preparation
