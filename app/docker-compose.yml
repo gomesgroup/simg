@@ -1,0 +1,52 @@
+version: '3'
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    expose:
+      - "8501"
+    depends_on:
+      - redis
+    environment:
+      - REDIS_HOST=redis://:simg_star@redis:6379
+      - REDIS_PASSWORD=simg_star
+  redis:
+    image: redis
+    command: redis-server --requirepass simg_star --bind 0.0.0.0
+    expose:
+      - "6379:6379"
+    ports:
+      - "6379:6379"
+#  worker:
+#    platform: linux/amd64
+#    build:
+#      context: ./worker
+#      dockerfile: Dockerfile
+#    depends_on:
+#      - redis
+#    environment:
+#      - REDIS_HOST=redis://redis:6379
+#    volumes:
+#      - ../simg:/app/simg
+#    restart: unless-stopped
+  dashboard:
+    image: cjlapao/rq-dashboard
+    ports:
+      - "9181:9181"
+    depends_on:
+      - redis
+    environment:
+      - RQ_DASHBOARD_REDIS_URL=redis://redis:6379
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./ssl:/etc/nginx/ssl:ro
+    depends_on:
+      - frontend
+      - dashboard
+

@@ -527,6 +527,7 @@ def pipeline(symbols, coordinates, connectivity, threshold=0, use_threshold=True
     n_lps, n_conj_lps = predict_lps(molecular_graph)
     graph = get_final_graph(molecular_graph, connectivity, n_lps, n_conj_lps)
     graph = prepare_graph(graph)
+    graph.a2b_index = graph.a2b_index.T
     (preds_1, symbol_1, index_1), (a2b_preds, node_preds, int_preds) = make_preds_no_gt(graph, threshold, use_threshold)
 
     return graph, (n_lps, n_conj_lps), (preds_1, symbol_1, index_1), (a2b_preds, node_preds, int_preds)

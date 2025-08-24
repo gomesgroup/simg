@@ -6,7 +6,7 @@ PROHIBITED_INTERACTION_TYPES = {'CR', 'RY*', 'RY'}
 PERTURBATION_ENERGY_NORMALIZER = 100
 PERCENT_NORMALIZER = 100
 COLOR_MAPPER = {
-    'H': 'whitesmoke',
+    'H': 'lightgray',
     'B': 'burlywood',
     'C': 'dimgrey',
     'N': 'royalblue',
