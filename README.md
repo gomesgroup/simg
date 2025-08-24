@@ -7,7 +7,7 @@ Molecular representation is a foundational element in our understanding of the p
 
 ## Data availability
 
-The data is available at https://drive.google.com/drive/folders/1cDTih3LFKu5vEmoy6EvtoTgif9dE1_HV?usp=share_link
+The data is available at [Hugging Face](https://huggingface.co/gomesgroup/simg/tree/main)
 
 
 ## Environment
