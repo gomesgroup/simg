@@ -1,0 +1,6 @@
+lr: 0.001
+model_type: SimpleGNN
+model_params:
+  out_channels: 32
+  hidden_channels: 32
+  num_layers: 2
